@@ -18,4 +18,16 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: "0.8.4",
+  networks: {
+    hardhat: {},
+    ganache: {
+      url: 'http://localhost:8545',
+      accounts: ['1b1bdd4bf499f0f55da94513d82881bdf67235a24a6fe5b28be17fd6aa34fd72'],
+      networkCheckTimeout: 20000,
+      skipDryRun: true,
+      gas: 7000000,
+      gasPrice: 5000000000,
+      network_id: 1337
+    },
+  }
 };
